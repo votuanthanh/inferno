@@ -2,6 +2,11 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
+import Sidebar from './components/sidebar/Collapse'
+
+console.log(Sidebar);
+
+Vue.component('sidebar-collapse', Sidebar)
 
 // Adding the X-CSRF-Token to all axios request
 axios.interceptors.request.use(function(config){
@@ -19,3 +24,7 @@ Vue.use(VueRouter)
 const app = new Vue({
   el: '#app'
 })
+
+app.$http.get('/api/hello').then(res => {
+    console.log(res);
+});

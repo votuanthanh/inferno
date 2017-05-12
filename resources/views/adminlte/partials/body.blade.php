@@ -1,5 +1,5 @@
 <body class="hold-transition skin-red-light sidebar-mini">
-<div class="wrapper">
+<div class="wrapper" id="app">
 
   @include('adminlte.partials.top-nav')
   <!-- Left side column. contains the logo and sidebar -->
